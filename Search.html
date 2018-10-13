@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Search Engine in PHP</title>
+	<style type="text/css">
+		/******************search*************/
+
+		#logo-container {
+			position: relative;
+			height: 250px;
+			margin-bottom: 25px;
+		}
+
+		#logo-image {
+			width: 300px;
+			position: absolute;
+			left: 50%;
+			margin-left: -150px;
+			bottom: 0px;
+		}
+
+		/* FORM */
+
+		form {
+			width: 570px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		input:first-child {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 15px;
+			width: 570px;
+			height: 28px;
+			font-size: 14px;
+			padding-left: 10px;
+			border: 1px solid #b2b2b2;
+			background: url(data:image/gif;base64,R0lGODlhHAAmAKIHAKqqqsvLy0hISObm5vf394uLiwAAAP///yH5BAEAAAcALAAAAAAcACYAAAO9eLpMIMYIQJi9DcYtKv6KtnHgB4yoAZSXKAyDy1rjoAzjzOQLrx8+4OanCAZnxiExGSEKmz3lj2lwUq3SZ3WZPbKuXGgxu9t4tLYDTkpIRQILF0x2G4lWipM7gj/oJQUkcXsCDCIFATULBCIcZ2tvB3QLDxETFnR/BgU/gRt9jX0gnpYMkJZpFzEoqQqJKAIBaQOVKHAXr3t7txgBjboSvB8EpLoFZywOAo3LFE5lYs/QW9LT1TRk1V7S2xYJADs=) no-repeat scroll left;
+			background-size: 14px 19px;
+			background-position: 98%;
+		}
+
+		.button {
+			height: 28px;
+			font: bold 11px Arial;
+			display: block;
+			margin: 0px;
+			border: 1px solid #d8d8d8;
+			background-color: #f3f3f3;
+			border-radius: 3px;
+			color: #444444;
+		}
+
+		.button:nth-child(2) {
+			margin-left: 175px;
+			float: left;
+		}
+
+		.button:nth-child(3) {
+			margin-right: 175px;
+			float: right;
+		}
+
+		input:hover {
+			border: 1px solid #808080;
+			box-shadow: 0 1px 0 0 lightgrey;
+		}
+
+		div>input:hover {
+			box-shadow: none;
+		}
+
+		input:active {
+			border: 1px solid lightblue;
+		}
+
+		input:focus {
+			border: 1px solid #1369e9;
+			outline: none;
+		}
+
+		.a1 {
+			color: black;
+			padding: 7px 10px;
+		}
+
+		.a1:hover {
+			color: blue;
+
+		}
+
+		/********************************************/
+
+		/***********header*******************************/
+
+		header {
+			line-height: 50px;
+			text-align: right;
+			display: block;
+			padding: 4px;
+		}
+
+		button {
+			color: white;
+			background-color: steelblue;
+			position: relative;
+			padding: 4px;
+		}
+
+		#grid-icon {
+			vertical-align: middle;
+			height: 23px;
+			width: 23px;
+			padding: 7px 10px;
+		}
+
+		.login-button {
+			padding: 7px 10px;
+			vertical-align: middle;
+			font: bold 13px Arial;
+			color: white;
+			border-radius: 3px;
+			background-color: #4486f8;
+		}
+
+		.login-button:hover {
+			text-decoration: none;
+			color: white;
+			box-shadow: 0 1px 0 lightgrey;
+		}
+
+		/*******************************************/
+
+		/*****************footer*******************/
+
+		footer {
+			position: absolute;
+			left: 0px;
+			bottom: 0;
+			height: 40px;
+			width: 100%;
+			min-width: 975px;
+			border-top: 1px solid #e4e4e4;
+			background: #f2f2f2;
+			line-height: 40px;
+		}
+		.a2{
+			color: black;
+			padding: 7px 10px;
+		}
+		.a2:hover{
+			color: steelblue
+		}
+
+		/*******************************************/
+	</style>
+</head>
+
+<body>
+	<div style="text-align:right">
+		<header>
+
+			<a class="a1"  href="http://www.gmail.com">Gmail</a>
+
+			<a class="a1" href="https://images.google.com/">Images</a>
+
+			<a class="a1" >
+				<img id="grid-icon" src="images/grid.png">
+			</a>
+
+			<a class="login-button" href="#">Sign In</a>
+
+		</header>
+		<div id="logo-container">
+			<img id="logo-image" src="images/logo.jpg">
+		</div>
+		<form action="result.php" method="post">
+			<input type="text" name="user_query">
+			<input class="button" type="submit" name="search" value="Google Search">
+			<input class="button" type="submit" name="search" value="I'm Feeling Lucky">
+		</form>
+
+		<footer>
+
+			<a class="a2" href="https://www.google.co.in/intl/en_in/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2">Advertising</a>
+
+			<a class="a2" href="https://www.google.co.in/services/">Business</a>
+
+			<a class="a2" href="https://www.google.co.in/intl/en_in/about/?utm_source=google.com&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a>
+
+			<a class="a2" href="https://www.google.co.in/intl/en_in/policies/privacy/?fg=1">Privacy</a>
+			
+			<a class="a2" href="https://www.google.co.in/intl/en_in/policies/terms/?fg=1" > Terms</a>
+
+			<a class="a2" href="https://www.google.co.in/preferences?hl=en">Settings</a>
+		</footer>
+
+	</div>
+</body>
+
+</html>
